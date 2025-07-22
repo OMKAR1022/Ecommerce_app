@@ -44,7 +44,7 @@ class _CreateAccountPageState extends ConsumerState<CreateAccountPage> {
             TextField(
               controller: _nameController,
               decoration: InputDecoration(
-                hintText: 'Full Name',
+                hintText: 'Email',
                 hintStyle: TextStyle(
                   color: Colors.grey.withOpacity(0.6),
                 ),
@@ -64,7 +64,7 @@ class _CreateAccountPageState extends ConsumerState<CreateAccountPage> {
             TextField(
               controller: _emailController,
               decoration: InputDecoration(
-                hintText: 'Email',
+                hintText: 'Password',
                 hintStyle: TextStyle(
                   color: Colors.grey.withOpacity(0.6),
                 ),

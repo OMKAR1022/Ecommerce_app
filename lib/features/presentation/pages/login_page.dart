@@ -93,14 +93,14 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             Align(
               alignment: Alignment.centerRight,
                 child: Text("forget password ?",style: TextStyle(color: Colors.blue),)),
-            const Spacer(),
+            const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
               height: 56,
               child: ElevatedButton(
                 onPressed: () {
                   ref.read(authFlowProvider.notifier).setEmail(_emailController.text);
-                  context.go('/password');
+                  context.go('/home');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF4285F4),
@@ -119,6 +119,8 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 ),
               ),
             ),
+            const SizedBox(height: 20),
+            Divider(),
 
             const SizedBox(height: 32),
           ],

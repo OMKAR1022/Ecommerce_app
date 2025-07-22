@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../../features/home/presentation/pages/home_page.dart';
+
+import '../../features/home/presentatiioin/pages/home_page.dart';
 import '../../features/onboarding/presentation/pages/onboarding_page.dart';
 import '../../features/presentation/pages/create_account_page.dart';
 import '../../features/presentation/pages/login_page.dart';
 import '../../features/presentation/pages/max_attempts_page.dart';
 import '../../features/presentation/pages/new_password_page.dart';
-import '../../features/presentation/pages/password_page.dart';
 import '../../features/presentation/pages/password_recovery_page.dart';
 import '../../features/presentation/pages/password_typing_page.dart';
 import '../../features/presentation/pages/recovery_code_page.dart';
@@ -33,11 +33,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         name: 'login',
         builder: (context, state) => const LoginPage(),
       ),
-      GoRoute(
-        path: '/password',
-        name: 'password',
-        builder: (context, state) => const PasswordPage(),
-      ),
+
       GoRoute(
         path: '/password-typing',
         name: 'password-typing',

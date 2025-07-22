@@ -19,7 +19,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   Widget build(BuildContext context) {
     return CurvedBackground(
       child: Padding(
-        padding:  EdgeInsets.only(top: 350,right: 24,left: 24),
+        padding:  EdgeInsets.only(top: 100,right: 24,left: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
 
@@ -69,6 +69,30 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 ),
               ),
             ),
+            const SizedBox(height: 30),
+            TextField(
+              controller: _emailController,
+              decoration: InputDecoration(
+                hintText: 'password',
+                hintStyle: TextStyle(
+                  color: Colors.grey.withOpacity(0.6),
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
+                ),
+                filled: true,
+                fillColor: Colors.white,
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 16,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerRight,
+                child: Text("forget password ?",style: TextStyle(color: Colors.blue),)),
             const Spacer(),
             SizedBox(
               width: double.infinity,
@@ -87,7 +111,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   elevation: 0,
                 ),
                 child: const Text(
-                  'Next',
+                  'login',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -95,21 +119,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 16),
-            Center(
-              child: TextButton(
-                onPressed: () {
-                  context.go('/onboarding');
-                },
-                child: const Text(
-                  'Cancel',
-                  style: TextStyle(
-                    color: Color(0xFF6B7280),
-                    fontSize: 16,
-                  ),
-                ),
-              ),
-            ),
+
             const SizedBox(height: 32),
           ],
         ),

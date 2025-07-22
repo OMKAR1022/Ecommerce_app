@@ -63,7 +63,7 @@ class CurvedBackground extends StatelessWidget {
           // Avatar if needed
           if (showAvatar)
             Positioned(
-              top: 120,
+              top: 300,
               left: 0,
               right: 0,
               child: Center(
